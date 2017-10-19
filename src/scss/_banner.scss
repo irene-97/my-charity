@@ -1,0 +1,51 @@
+.banner {
+	height: 601px;
+	background: url("../images/banner.jpg") center no-repeat;
+	background-size: cover;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__content {
+		text-align: center;
+		color: $color-white;
+
+		&__title {
+			font-weight: bold;
+			font-size: 50px;
+			line-height: 50px;
+			text-transform: uppercase;
+		}
+
+		&__text {
+			padding-top: 12px;
+			padding-bottom: 33px;
+			font-weight: 300;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		&__button {
+			margin-top: 10px;
+			outline: none;
+			border: 0;
+			border-radius: 30px;
+			padding: 9px 58px;
+			font-family: $font-open-sans;
+			font-weight: bold;
+			font-size: 26px;
+			color: $color-chateau-green;
+			background: $color-wild-sand;
+			transition: background 0.1s ease;
+
+			&:hover {
+				color: $color-wild-sand;
+				background: $color-chateau-green;
+			}
+		}
+	}
+}
