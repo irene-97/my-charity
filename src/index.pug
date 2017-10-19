@@ -1,0 +1,11 @@
+extends pug/base
+
+prepend vars
+	- title = 'My Charity'
+
+append vars
+	- link.icon = 'favicon.ico'
+	- link.icon16x16 = 'favicon-16x16.png'
+	- link.icon32x32 = 'favicon-32x32.png'
+
+block content
