@@ -1,4 +1,45 @@
-$sprites: ();
+$sprites: (
+	"event-day-active": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 88,
+			height: 102,
+			image: "sprites.png",
+			total_width: 178,
+			total_height: 102,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 176,
+			height: 204,
+			image: "sprites@2x.png",
+			total_width: 356,
+			total_height: 204,
+		),
+	),
+	"event-day": (
+		normal: (
+			x: 90,
+			y: 0,
+			width: 88,
+			height: 102,
+			image: "sprites.png",
+			total_width: 178,
+			total_height: 102,
+		),
+		retina: (
+			x: 180,
+			y: 0,
+			width: 176,
+			height: 204,
+			image: "sprites@2x.png",
+			total_width: 356,
+			total_height: 204,
+		),
+	),
+);
 
 @each $name in map-keys($sprites) {
 	.sprite-#{$name} {

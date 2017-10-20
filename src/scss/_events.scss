@@ -1,0 +1,96 @@
+.events {
+	padding: 86px 0;
+
+	&__title {
+		font-weight: 300;
+		font-size: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__event {
+		margin: 60px 35px 0;
+		width: 270px;
+		text-align: center;
+
+		&__date {
+			&__day {
+				position: relative;
+				margin: 0 auto;
+				width: 88px;
+				text-align: center;
+
+				&::before {
+					@include sprite("event-day");
+
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+
+				span {
+					position: relative;
+					display: inline-block;
+					margin-top: 23px;
+					font-weight: bold;
+					font-size: 36px;
+					line-height: 36px;
+					color: $color-white;
+				}
+			}
+
+			&__month {
+				margin-top: 48px;
+				font-size: 30px;
+				color: $color-mexican-red;
+			}
+		}
+
+		&__title {
+			margin-top: 19px;
+			font-size: 18px;
+			line-height: 18px;
+			color: $color-black;
+		}
+
+		&__text {
+			margin-top: 9px;
+			margin-bottom: 26px;
+			font-family: $font-roboto;
+			font-size: 14px;
+			line-height: 22px;
+			color: $color-cape-cod;
+		}
+
+		&__more {
+			outline: none;
+			border: none;
+			padding: 7px 25px;
+			font-family: $font-roboto;
+			font-size: 14px;
+			line-height: 22px;
+			text-transform: uppercase;
+			color: $color-white;
+			background: $color-mexican-red;
+
+			&:hover {
+				background: darken($color-mexican-red, 5%);
+			}
+		}
+
+		&--active {
+			.events__event__date__day {
+				&::before {
+					@include sprite("event-day-active");
+				}
+			}
+		}
+	}
+}
