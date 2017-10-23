@@ -1,0 +1,169 @@
+.footer {
+	margin-top: 58px;
+	background: $color-cape-cod;
+
+	&__menu {
+		padding-top: 57px;
+		padding-bottom: 51px;
+		text-align: center;
+
+		&__item {
+			margin: 0 20px;
+			padding: 10px;
+			font-size: 15px;
+			line-height: 22px;
+			text-decoration: none;
+			color: $color-gray;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&--active {
+				color: $color-pampas;
+			}
+		}
+	}
+
+	&__actions {
+		display: flex;
+		border-top: solid 1px rgba($color-white, 0.1);
+		border-bottom: solid 1px rgba($color-white, 0.1);
+		padding-bottom: 28px;
+
+		&__title {
+			margin-bottom: 12px;
+			font-size: 18px;
+			line-height: 22px;
+			color: $color-silver;
+		}
+
+		&__socials {
+			margin-top: 39px;
+			margin-bottom: 12px;
+			width: 140px;
+
+			&__link {
+				position: relative;
+				display: inline-block;
+				margin-right: 9px;
+				width: 40px;
+				height: 40px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&--fb {
+					background: #3b5997;
+
+					&::before {
+						@include sprite("fb");
+					}
+
+					&:hover {
+						background: darken(#3b5997, 7%);
+					}
+				}
+
+				&--tw {
+					background: #3ec2f3;
+
+					&::before {
+						@include sprite("tw");
+					}
+
+					&:hover {
+						background: darken(#3ec2f3, 7%);
+					}
+				}
+
+				&--gp {
+					background: #e44c41;
+
+					&::before {
+						@include sprite("gp");
+					}
+
+					&:hover {
+						background: darken(#e44c41, 7%);
+					}
+				}
+			}
+		}
+
+		&__news {
+			margin: 39px auto 0;
+
+			&__form {
+				font-size: 0;
+
+				input {
+					display: inline-block;
+					vertical-align: top;
+					outline: none;
+					border: none;
+					padding: 0 19px;
+					height: 40px;
+					font-family: $font-roboto;
+					font-size: 16px;
+					line-height: 22px;
+					color: $color-white;
+					background: $color-tundora;
+				}
+
+				button {
+					display: inline-block;
+					vertical-align: top;
+					outline: none;
+					border: none;
+					padding: 10px 26px;
+					height: 40px;
+					font-family: $font-roboto;
+					font-size: 16px;
+					line-height: 22px;
+					color: $color-white;
+					background: $color-mexican-red;
+
+					&:hover {
+						background: darken($color-mexican-red, 8%);
+					}
+				}
+			}
+		}
+
+		&__contacts {
+			margin-top: 39px;
+			text-align: right;
+			color: $color-gray;
+
+			&__phone,
+			&__aderss {
+				font-family: $font-open-sans;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		}
+	}
+
+	&__copyright {
+		padding: 31px 0 42px;
+		font-size: 15px;
+		line-height: 22px;
+		text-align: center;
+		color: $color-gray;
+
+		a {
+			margin: 0 8px;
+			color: $color-gray;
+		}
+	}
+}
