@@ -42,6 +42,53 @@
 				color: $color-white;
 				background: $color-mexican-red;
 			}
+
+			@media (max-width: 960px) {
+				padding: 7px 10px;
+			}
+		}
+
+		@media (max-width: 870px) {
+			display: none;
+		}
+	}
+
+	&__hamburger {
+		@include sprite("menu");
+
+		display: none;
+		outline: none;
+		border: none;
+		width: 84px;
+		height: 84px;
+		background-size: cover;
+
+		@media (max-width: 870px) {
+			display: block;
+		}
+
+		@media (min-width: 871px) {
+			display: none !important;
+		}
+	}
+
+	&__mobile-menu {
+		display: none;
+		padding-right: 125px;
+		padding-left: 30px;
+		background: $color-mexican-red;
+
+		&__item {
+			display: block;
+			margin: 5px 0;
+			padding: 5px 0;
+			font-size: 30px;
+			text-decoration: none;
+			color: $color-white;
+		}
+
+		@media (min-width: 871px) {
+			display: none !important;
 		}
 	}
 }
