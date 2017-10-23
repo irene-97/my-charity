@@ -22,6 +22,16 @@
 			&--active {
 				color: $color-pampas;
 			}
+
+			@media (max-width: 860px) {
+				display: inline-block;
+				margin: 0 8px;
+			}
+		}
+
+		@media (max-width: 860px) {
+			padding-top: 38px;
+			padding-bottom: 25px;
 		}
 	}
 
@@ -98,6 +108,10 @@
 					}
 				}
 			}
+
+			@media (max-width: 740px) {
+				margin: 0 auto 25px;
+			}
 		}
 
 		&__news {
@@ -138,10 +152,15 @@
 					}
 				}
 			}
+
+			@media (max-width: 740px) {
+				margin: 0 auto 25px;
+			}
 		}
 
 		&__contacts {
 			margin-top: 39px;
+			width: 140px;
 			text-align: right;
 			color: $color-gray;
 
@@ -151,6 +170,17 @@
 				font-size: 14px;
 				line-height: 14px;
 			}
+
+			@media (max-width: 740px) {
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+
+		@media (max-width: 740px) {
+			display: block;
+			padding-top: 28px;
+			text-align: center;
 		}
 	}
 
